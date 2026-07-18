@@ -1,8 +1,9 @@
 ---
 import Main from "../layouts/Main.astro";
 import { Navigation } from "../components/Navigation.tsx";
+import { NavLinks } from "../config";
 ---
 
 <Main>
-	<Navigation client:load />
+	<Navigation active={NavLinks.Socials} client:load />
 </Main>

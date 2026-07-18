@@ -20,5 +20,9 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "tailwindcss": "^4.3.2"
+  },
+  "devDependencies": {
+    "@iconify-icons/mdi": "^1.2.48",
+    "@iconify/react": "^6.0.2"
   }
 }
