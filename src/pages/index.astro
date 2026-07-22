@@ -1,8 +1,8 @@
 ---
-import Main from "../layouts/Main.astro";
-import { Navigation } from "../components/Navigation.tsx";
+import Layout from "../layouts/Layout.astro";
+import { MainWrapper } from "../components/MainWrapper";
 ---
 
-<Main>
-	<Navigation client:load />
-</Main>
+<Layout>
+	<MainWrapper client:load />
+</Layout>
