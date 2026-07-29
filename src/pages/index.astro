@@ -1,8 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { MainWrapper } from "../components/MainWrapper";
 ---
 
 <Layout>
-	<MainWrapper client:load />
+	<main class="flex-1 flex gap-4 p-1 lg:p-4">
+		<div class="*:bg-white *:rounded-3xl *:p-5 h-full w-full lg:w-120 flex flex-col gap-1 *:shadow-md">
+			<div>One</div>
+			<div class="flex-1">Two</div>
+			<div>Three</div>
+			<div class="flex-2">Three</div>
+			<div>Four</div>
+		</div>
+		<div class="bg-gray-100 *:bg-white rounded-3xl *:rounded-2xl *:p-5 *:shadow-md p-2 h-full grow hidden lg:flex flex-col gap-1">
+			<div>One</div>
+			<div class="flex-1">Two</div>
+		</div>
+	</main>
 </Layout>
