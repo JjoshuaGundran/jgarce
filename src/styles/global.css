@@ -3,3 +3,25 @@
 body {
     @apply min-h-svh w-full bg-gray-200 overflow-hidden flex
 }
+
+.tab-bg-transition {
+    @apply bg-gray-100;
+    transition: background-color 0.3s ease;
+}
+
+.tab-bg-transition.active {
+    @apply bg-purple-300;
+}
+
+.box-transition > * {
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.box-transition.left > * {
+    transform: translateX(-110%);
+}
+
+.box-transition.right > * {
+    transform: translateX(110%);
+}

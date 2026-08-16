@@ -1,55 +1,55 @@
 import { Tabs } from "../config";
-import type { Tab, TabsType } from "../config";
+import type { Tab } from "../config";
 
 import { useEffect, useState } from "react"
-import { PhotoSection } from "./PhotoSection"
+import { TabDisplay } from "./TabDisplay";
 
 interface Props {
-  isLarge: boolean,
+  isSmall: boolean,
 }
 
 const TABS: Tab[] = [
   {
     name: Tabs.Info,
-    isLarge: false,
+    isSmallScreenOnly: false,
   },
   {
     name: Tabs.Photos,
-    isLarge: true,
+    isSmallScreenOnly: true,
   },
   {
     name: Tabs.Socials,
-    isLarge: false,
+    isSmallScreenOnly: false,
   },
 ]
 
-export function MainSection({ isLarge }: Props) {
+export function MainSection({ isSmall }: Props) {
   const [currentTab, setCurrentTab] = useState<Tab>(TABS[0]);
 
   function getBtnCss(name: string): string {
-    const isActive = name === currentTab.name;
-    let css = "";
-
-    return css;
+    const baseCss = "tab-bg-transition";
+    const isActive = name === currentTab.name ? " active" : "";
+    return baseCss + isActive;
   }
+
+  useEffect(() => {
+    if (currentTab.name === Tabs.Photos && !isSmall) {
+      setCurrentTab(TABS[0]);
+    };
+  }, [isSmall])
   
   return (
-    <div className="h-full w-full flex flex-col gap-1 lg:w-120 *:bg-white *:rounded-3xl *:shadow-md">
-      <div className="p-2 flex justify-between items-center">
+    <div className="h-full w-full flex flex-col gap-1 lg:w-120">
+      <div className="p-2 flex justify-between items-center bg-white rounded-3xl shadow-md">
         <div>Logo</div>
-        <div className="flex gap-2 *:bg-gray-100 *:rounded-3xl *:p-2">
+        <div className="flex gap-2 *:rounded-3xl *:p-2 *:cursor-pointer">
           {TABS.map((tab, idx) => {
-            if (tab.isLarge) return isLarge && <button key={idx} className={getBtnCss(tab.name)}>{tab.name}</button>;
-            else return <button key={idx} className={getBtnCss(tab.name)}>{tab.name}</button>;
+            if (tab.isSmallScreenOnly) return isSmall && <button key={idx} className={getBtnCss(tab.name)} onClick={() => setCurrentTab(tab)}>{tab.name}</button>;
+            else return <button key={idx} className={getBtnCss(tab.name)} onClick={() => setCurrentTab(tab)}>{tab.name}</button>;
           })}
         </div>
       </div>
-      <div className="flex-1 p-4">Two</div>
-      <div className="p-2">Three</div>
-      <div className="flex-2 p-2 overflow-y-auto *:bg-gray-100 *:rounded-3xl *:p-2">
-        <div>Three</div>
-      </div>
-      <div className="p-2">Four</div>
+      <TabDisplay tab={currentTab.name} isSmall={isSmall} />
     </div>
   )
 }

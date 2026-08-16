@@ -1,6 +1,6 @@
 export interface Tab {
   name: TabsType,
-  isLarge: boolean,
+  isSmallScreenOnly: boolean,
 }
 export const Tabs = {
   Info: 'Info',
