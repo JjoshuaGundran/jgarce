@@ -1,6 +1,6 @@
-import { Tabs, Animation, type TabsType, type AnimationState } from "../config";
+import { Tabs, Animation, type TabsType, type AnimationState, type ITabProps } from "../config";
 import { useState, useEffect } from "react";
-import { InfoTab } from "./InfoTab";
+import { InfoTab } from "./InfoTab/InfoTab";
 import { SocialsTab } from "./SocialsTab";
 import { PhotoTab } from "./PhotoTab";
 
@@ -38,7 +38,7 @@ export function TabDisplay({ tab, isSmall, switchToFirstTab }: Props) {
   }
 
   function getDisplay(currTab: TabsType) {
-    const props = {
+    const props: ITabProps = {
       animation: animation,
       onExitComplete: onExitComplete,
       onEnterComplete: () => setAnimation(Animation.Idle),

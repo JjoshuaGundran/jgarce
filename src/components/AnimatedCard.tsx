@@ -1,6 +1,6 @@
 import { Animation, type AnimationState } from "../config";
 
-interface Props {
+interface AnimatedCardProps {
   idx: number;
   total: number;
   animation: AnimationState;
@@ -20,7 +20,7 @@ export function AnimatedCard({
   onExitComplete,
   onEnterComplete,
   className = "",
-}: Props) {
+}: AnimatedCardProps) {
   const transitionTime = 100;
 
   function getCardState(): string {
