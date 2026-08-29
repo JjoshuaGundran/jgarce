@@ -13,15 +13,36 @@ body {
     @apply bg-purple-300;
 }
 
-.box-transition > * {
-    transform: translateX(0);
-    transition: transform 0.4s ease-in-out;
+.tab-container {
+    @apply h-full flex flex-col gap-1 overflow-hidden *:bg-white *:rounded-3xl *:shadow-md *:p-2
 }
 
-.box-transition.left > * {
-    transform: translateX(-110%);
+.card.enter {
+    animation: card-enter 0.6s ease-in-out both;
+    animation-delay: var(--card-enter-delay);
 }
 
-.box-transition.right > * {
-    transform: translateX(110%);
+.card.exit {
+    animation: card-exit 0.6s ease-in-out both;
+    animation-delay: var(--card-exit-delay);
+}
+
+@keyframes card-enter {
+    from {
+        transform: translateX(300%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes card-exit {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-300%);
+    }
 }

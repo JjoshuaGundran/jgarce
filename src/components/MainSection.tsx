@@ -1,14 +1,12 @@
-import { Tabs } from "../config";
-import type { Tab } from "../config";
-
-import { useEffect, useState } from "react"
+import { Tabs, type ITab } from "../config";
+import { useState } from "react"
 import { TabDisplay } from "./TabDisplay";
 
 interface Props {
   isSmall: boolean,
 }
 
-const TABS: Tab[] = [
+const TABS: ITab[] = [
   {
     name: Tabs.Info,
     isSmallScreenOnly: false,
@@ -24,7 +22,7 @@ const TABS: Tab[] = [
 ]
 
 export function MainSection({ isSmall }: Props) {
-  const [currentTab, setCurrentTab] = useState<Tab>(TABS[0]);
+  const [currentTab, setCurrentTab] = useState<ITab>(TABS[0]);
 
   function getBtnCss(name: string): string {
     const baseCss = "tab-bg-transition";
@@ -32,11 +30,9 @@ export function MainSection({ isSmall }: Props) {
     return baseCss + isActive;
   }
 
-  useEffect(() => {
-    if (currentTab.name === Tabs.Photos && !isSmall) {
-      setCurrentTab(TABS[0]);
-    };
-  }, [isSmall])
+  function switchToFirstTab() {
+    setCurrentTab(TABS[0]);
+  }
   
   return (
     <div className="h-full w-full flex flex-col gap-1 lg:w-120">
@@ -49,7 +45,7 @@ export function MainSection({ isSmall }: Props) {
           })}
         </div>
       </div>
-      <TabDisplay tab={currentTab.name} isSmall={isSmall} />
+      <TabDisplay tab={currentTab.name} isSmall={isSmall} switchToFirstTab={switchToFirstTab} />
     </div>
   )
 }
