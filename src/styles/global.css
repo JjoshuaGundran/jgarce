@@ -14,7 +14,7 @@ body {
 }
 
 .tab-container {
-    @apply h-full flex flex-col gap-1 overflow-hidden *:bg-white *:rounded-3xl *:shadow-md *:p-2
+    @apply h-full flex flex-col gap-1 overflow-hidden *:bg-white *:rounded-3xl *:shadow-md
 }
 
 .card.enter {

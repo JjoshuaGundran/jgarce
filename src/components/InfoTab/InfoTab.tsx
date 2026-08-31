@@ -6,7 +6,7 @@ import { SliderCard } from "./SliderCard";
 
 const cards: ITabCard[] = [
   {
-    className: "flex-1 p-4 min-w-fit",
+    className: "flex flex-col gap-15 flex-1 p-4 min-w-fit",
     isLast: false,
     component: ProfileCard,
   },
@@ -16,12 +16,12 @@ const cards: ITabCard[] = [
     component: SliderCard,
   },
   {
-    className: "flex-2 p-2 overflow-y-auto *:bg-gray-100 *:rounded-3xl *:p-2",
+    className: "flex-2 p-2 overflow-y-auto *:bg-gray-100 *:rounded-2xl *:p-2",
     isLast: false,
     component: ProjectCard,
   },
   {
-    className: "p-2",
+    className: "p-4 h-fit",
     isLast: true,
     component: ContactCard,
   },
@@ -31,10 +31,17 @@ export function InfoTab(props: ITabProps) {
   return (
     <>
       {cards.map((card, idx) => {
-        const Component = card.component;
+        const Card = card.component;
 
         return (
-          <Component key={idx} idx={idx} total={4} className={card.className} isLast={card.isLast} {...props} />
+          <Card
+            key={idx}
+            idx={idx}
+            total={4}
+            isLast={card.isLast} 
+            className={card.className}
+            {...props}
+          />
         );
       })}
     </>
