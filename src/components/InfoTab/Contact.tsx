@@ -1,7 +1,7 @@
 import type { ITabCardProps } from "../../config"
 import { AnimatedCard } from "../common/AnimatedCard"
 
-export function SliderCard({
+export function Contact({
   idx,
   className,
   isLast,
@@ -21,7 +21,7 @@ export function SliderCard({
       onEnterComplete={onEnterComplete}
       className={className}
     >
-      <div>Two</div>
+      <div>Four</div>
     </AnimatedCard>
   )
 }

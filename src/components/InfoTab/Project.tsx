@@ -1,7 +1,7 @@
 import type { ITabCardProps } from "../../config"
 import { AnimatedCard } from "../common/AnimatedCard"
 
-export function ContactCard({
+export function Project({
   idx,
   className,
   isLast,
@@ -21,7 +21,7 @@ export function ContactCard({
       onEnterComplete={onEnterComplete}
       className={className}
     >
-      <div>Four</div>
+      <div>Three</div>
     </AnimatedCard>
   )
 }

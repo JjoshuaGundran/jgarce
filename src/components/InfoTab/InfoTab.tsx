@@ -1,29 +1,29 @@
 import type { ITabCard, ITabProps } from "../../config";
-import { ContactCard } from "./ContactCard";
-import { ProfileCard } from "./ProfileCard";
-import { ProjectCard } from "./ProjectCard";
-import { SliderCard } from "./SliderCard";
+import { Contact } from "./Contact";
+import { Profile } from "./Profile";
+import { Project } from "./Project";
+import { Slider } from "./Slider";
 
 const cards: ITabCard[] = [
   {
     className: "flex flex-col flex-1 justify-between p-4 min-w-fit",
     isLast: false,
-    component: ProfileCard,
+    component: Profile,
   },
   {
     className: "p-2",
     isLast: false,
-    component: SliderCard,
+    component: Slider,
   },
   {
     className: "flex-2 p-2 overflow-y-auto *:bg-gray-100 *:rounded-2xl *:p-2",
     isLast: false,
-    component: ProjectCard,
+    component: Project,
   },
   {
     className: "p-4 h-fit",
     isLast: true,
-    component: ContactCard,
+    component: Contact,
   },
 ]
 
