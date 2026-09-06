@@ -16,7 +16,7 @@ const cards: ITabCard[] = [
     component: Slider,
   },
   {
-    className: "flex-2 p-2 overflow-y-auto *:bg-gray-100 *:rounded-2xl *:p-2",
+    className: "flex flex-col gap-2 flex-2 p-2 overflow-y-auto",
     isLast: false,
     component: Project,
   },

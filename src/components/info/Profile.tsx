@@ -22,7 +22,7 @@ export function Profile({
       className={className}
     >
       <div>
-        <div className="rounded-2xl bg-purple-400 w-30 h-30 lg:w-38 lg:h-38">John</div>
+        <div className="rounded-2xl bg-purple-400 w-30 h-30 lg:w-38 lg:h-38"></div>
       </div>
       <p className="text-lg">
         Personal website of John Gundran, a software developer who likes making things. 

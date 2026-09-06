@@ -1,5 +1,6 @@
 import type { ITabCardProps } from "../../config"
 import { AnimatedCard } from "../common/AnimatedCard"
+import { ProjectCard } from "./ProjectCard"
 
 export function Project({
   idx,
@@ -21,7 +22,15 @@ export function Project({
       onEnterComplete={onEnterComplete}
       className={className}
     >
-      <div>Three</div>
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </AnimatedCard>
   )
 }
