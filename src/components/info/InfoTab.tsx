@@ -1,7 +1,7 @@
 import type { ITabCard, ITabProps } from "../../config";
 import { Contact } from "./Contact";
 import { Profile } from "./Profile";
-import { Project } from "./Project";
+import { Projects } from "./Projects";
 import { Slider } from "./Slider";
 
 const cards: ITabCard[] = [
@@ -18,7 +18,7 @@ const cards: ITabCard[] = [
   {
     className: "flex flex-col gap-2 flex-2 p-2 overflow-y-auto",
     isLast: false,
-    component: Project,
+    component: Projects,
   },
   {
     className: "p-4 h-fit",
