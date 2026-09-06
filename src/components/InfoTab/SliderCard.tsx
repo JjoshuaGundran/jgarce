@@ -1,5 +1,5 @@
 import type { ITabCardProps } from "../../config"
-import { AnimatedCard } from "../AnimatedCard"
+import { AnimatedCard } from "../common/AnimatedCard"
 
 export function SliderCard({
   idx,

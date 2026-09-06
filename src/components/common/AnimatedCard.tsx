@@ -1,4 +1,4 @@
-import { Animation, type AnimationState } from "../config";
+import { Animation, type AnimationState } from "../../config";
 
 interface AnimatedCardProps {
   idx: number;

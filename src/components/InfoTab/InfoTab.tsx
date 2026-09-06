@@ -6,7 +6,7 @@ import { SliderCard } from "./SliderCard";
 
 const cards: ITabCard[] = [
   {
-    className: "flex flex-col gap-15 flex-1 p-4 min-w-fit",
+    className: "flex flex-col flex-1 justify-between p-4 min-w-fit",
     isLast: false,
     component: ProfileCard,
   },

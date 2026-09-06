@@ -1,5 +1,5 @@
 import type { ITabProps } from "../config";
-import { AnimatedCard } from "./AnimatedCard";
+import { AnimatedCard } from "./common/AnimatedCard";
 
 export function SocialsTab({ animation, onExitComplete, onEnterComplete }: ITabProps) {
   return (
