@@ -1,6 +1,6 @@
 import { Tabs, Animation, type TabsType, type AnimationState, type ITabProps } from "../config";
 import { useState, useEffect } from "react";
-import { InfoTab } from "./InfoTab/InfoTab";
+import { InfoTab } from "./info/InfoTab";
 import { SocialsTab } from "./SocialsTab";
 import { PhotoTab } from "./PhotoTab";
 
