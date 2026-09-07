@@ -11,20 +11,14 @@ interface IProject {
 
 const projects: IProject[] = [
   {
-    url: "#/something",
-    title: "Something",
-    description: "This is a description for something",
-  },
-  {
-    url: "#/another",
-    title: "Another",
+    url: "#",
+    title: "Example Project",
     description: `
-      Description for another Description for another
-      Description for another Description for another
-      Description for another Description for another
-      Description for another Description for another
-      `
-  }
+      This is just a placeholder project. Will add projects soon :)
+      For now, this will just have to be alone. All alone...
+      here in this big space.
+      `,
+  },
 ]
 
 export function Projects({
