@@ -6,7 +6,7 @@ export function Main() {
   const isSmall = useMediaQuery("(max-width: 64rem)");
   
   return (
-    <main className="flex-1 flex gap-4 p-1 lg:p-4">
+    <main className="flex-1 flex max-h-svh max-w-svw gap-4 p-1 lg:p-4">
       <MainSection isSmall={isSmall} />
       <PhotoSection isVisible={!isSmall} />
 	  </main>

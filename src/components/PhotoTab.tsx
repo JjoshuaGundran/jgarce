@@ -1,5 +1,5 @@
 import type { ITabProps } from "../config";
-import { AnimatedCard } from "./AnimatedCard";
+import { AnimatedCard } from "./common/AnimatedCard";
 import { PhotoSection } from "./PhotoSection";
 
 export function PhotoTab({ animation, onExitComplete, onEnterComplete }: ITabProps) {
