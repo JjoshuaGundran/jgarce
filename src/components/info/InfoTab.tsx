@@ -10,7 +10,7 @@ const cards: ITabCard[] = [
     component: Profile,
   },
   {
-    className: "flex flex-col gap-2 flex-2 p-2 overflow-y-auto",
+    className: "flex flex-col min-h-39 gap-2 flex-2 p-2 overflow-y-auto",
     isLast: false,
     component: Projects,
   },
