@@ -35,7 +35,7 @@ export function MainSection({ isSmall }: Props) {
   }
   
   return (
-    <div className="h-full w-full flex flex-col gap-1 lg:w-120">
+    <div className="h-full overflow-y-auto w-full flex flex-col gap-1 lg:w-120">
       <div className="p-2 flex justify-between items-center bg-white rounded-3xl shadow-md">
         <div>Logo</div>
         <div className="flex gap-2 *:rounded-3xl *:p-2 *:cursor-pointer">
