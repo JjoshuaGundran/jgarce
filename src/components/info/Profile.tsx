@@ -8,7 +8,6 @@ import ermImage from "../../assets/erm_actually.png"
 export function Profile({
   idx,
   className,
-  isLast,
   total,
   animation,
   onExitComplete,
@@ -26,7 +25,6 @@ export function Profile({
       idx={idx}
       total={total}
       animation={animation}
-      isLast={isLast}
       onExitComplete={onExitComplete}
       onEnterComplete={onEnterComplete}
       className={className}

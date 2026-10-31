@@ -9,7 +9,6 @@ export function SocialsTab({ animation, onExitComplete, onEnterComplete }: ITabP
         idx={0}
         total={1}
         animation={animation}
-        isLast={1 - 1 === 0}
         onExitComplete={onExitComplete}
         onEnterComplete={onEnterComplete}
         className=""

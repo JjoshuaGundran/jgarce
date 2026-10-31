@@ -6,17 +6,14 @@ import { Projects } from "./Projects";
 const cards: ITabCard[] = [
   {
     className: "flex flex-col gap-10 p-4 min-w-fit",
-    isLast: false,
     component: Profile,
   },
   {
     className: "flex flex-col min-h-39 gap-2 flex-2 p-2 overflow-y-auto",
-    isLast: false,
     component: Projects,
   },
   {
     className: "flex justify-between items-center p-4 h-fit",
-    isLast: true,
     component: Contact,
   },
 ]
@@ -31,8 +28,7 @@ export function InfoTab(props: ITabProps) {
           <Card
             key={idx}
             idx={idx}
-            total={4}
-            isLast={card.isLast} 
+            total={cards.length}
             className={card.className}
             {...props}
           />

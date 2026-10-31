@@ -18,12 +18,12 @@ body {
 }
 
 .card.enter {
-    animation: card-enter 0.6s ease-in-out both;
+    animation: card-enter var(--card-animation-duration, 600ms) ease-in-out both;
     animation-delay: var(--card-enter-delay);
 }
 
 .card.exit {
-    animation: card-exit 0.6s ease-in-out both;
+    animation: card-exit var(--card-animation-duration, 600ms) ease-in-out both;
     animation-delay: var(--card-exit-delay);
 }
 

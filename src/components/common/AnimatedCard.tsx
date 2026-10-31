@@ -4,7 +4,6 @@ interface AnimatedCardProps {
   idx: number;
   total: number;
   animation: AnimationState;
-  isLast: boolean;
   children: React.ReactNode;
   onExitComplete: () => void;
   onEnterComplete: () => void;
@@ -15,13 +14,13 @@ export function AnimatedCard({
   idx,
   total,
   animation,
-  isLast,
   children,
   onExitComplete,
   onEnterComplete,
   className = "",
 }: AnimatedCardProps) {
   const transitionTime = 100;
+  const animationDuration = 600;
 
   function getCardState(): string {
     switch (animation) {
@@ -34,11 +33,14 @@ export function AnimatedCard({
   function handleAnimationEnd(e: React.AnimationEvent<HTMLDivElement>) {
     if (e.target !== e.currentTarget) return;
 
-    if (animation === Animation.Exiting && isLast && e.animationName === "card-exit") {
+    const exitEndsLast = idx === 0;
+    const enterEndsLast = idx === total - 1;
+
+    if (animation === Animation.Exiting && exitEndsLast && e.animationName === "card-exit") {
       onExitComplete();
     }
 
-    else if (animation === Animation.Entering && isLast && e.animationName === "card-enter") {
+    else if (animation === Animation.Entering && enterEndsLast && e.animationName === "card-enter") {
       onEnterComplete();
     }
   }
@@ -48,8 +50,9 @@ export function AnimatedCard({
       className={`card ${className} ${getCardState()}`}
       style={
         {
-          "--card-enter-delay": `${idx * transitionTime}ms`, 
+          "--card-enter-delay": `${idx * transitionTime}ms`,
           "--card-exit-delay": `${(total - 1 - idx) * transitionTime}ms`,
+          "--card-animation-duration": `${animationDuration}ms`,
         } as React.CSSProperties
       }
       onAnimationEnd={handleAnimationEnd}

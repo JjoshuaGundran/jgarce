@@ -19,7 +19,6 @@ export interface ITabProps {
 
 export interface ITabCard {
   className: string,
-  isLast: boolean,
   component: (props: ITabCardProps) => React.JSX.Element,
 }
 
@@ -27,7 +26,6 @@ export interface ITabCardProps extends ITabProps {
   idx: number,
   className: string,
   total: number,
-  isLast: boolean,
 }
 
 export const Animation = {

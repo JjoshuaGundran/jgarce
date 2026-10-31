@@ -29,7 +29,6 @@ const SOCIALS: ISocial[] = [
 export function Contact({
   idx,
   className,
-  isLast,
   total,
   animation,
   onExitComplete,
@@ -56,7 +55,6 @@ export function Contact({
       idx={idx}
       total={total}
       animation={animation}
-      isLast={isLast}
       onExitComplete={onExitComplete}
       onEnterComplete={onEnterComplete}
       className={className}

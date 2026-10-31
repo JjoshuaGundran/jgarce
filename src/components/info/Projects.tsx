@@ -24,7 +24,6 @@ const projects: IProject[] = [
 export function Projects({
   idx,
   className,
-  isLast,
   total,
   animation,
   onExitComplete,
@@ -36,7 +35,6 @@ export function Projects({
       idx={idx}
       total={total}
       animation={animation}
-      isLast={isLast}
       onExitComplete={onExitComplete}
       onEnterComplete={onEnterComplete}
       className={className}
