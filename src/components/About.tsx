@@ -14,7 +14,6 @@ export function About() {
         <div className="size-50 sm:size-80 overflow-hidden rounded-sm border border-purple-100" onMouseEnter={onPortraitEnter} onMouseLeave={onPortraitLeave}>
           <img src={portrait} alt="My Portrait" />
         </div>
-
         <div className="flex-1 flex flex-col gap-2 justify-center">
           <p className="font-bold text-lg sm:text-xl tracking-tight">About Me</p>
           <p className="text-gray-500 sm:text-lg">
