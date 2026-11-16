@@ -1,12 +1,12 @@
 import { useState } from "react";
-import portraitOneImage from "../assets/portrait_one.png"
+import drawingImage from "../assets/drawing.png"
 import ermImage from "../assets/erm_actually.png"
 
 export function About() {
-  const [portrait, setPortrait] = useState<string>(portraitOneImage.src);
+  const [portrait, setPortrait] = useState<string>(drawingImage.src);
 
   const onPortraitEnter = () => setPortrait(ermImage.src);
-  const onPortraitLeave = () => setPortrait(portraitOneImage.src);
+  const onPortraitLeave = () => setPortrait(drawingImage.src);
   
   return (
     <section id="about">
