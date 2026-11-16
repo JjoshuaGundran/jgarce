@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <nav className="card flex items-center justify-between pl-3 pr-2 py-2 my-2 flex-wrap">
       <span className="font-bold text-lg tracking-tight">John Gundran</span>
-      <div className="items-center justify-center gap-1 hidden sm:flex">
+      <div className="flex items-center justify-center gap-1">
         {TARGETS.map((target) => <a href={target.url} className="rounded-sm p-2"><Icon icon={target.icon} className="size-6" /></a>)}
       </div>
     </nav>
