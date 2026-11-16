@@ -1,4 +1,3 @@
-import type { MouseEventHandler } from "react";
 import { Icon, type IconifyIcon } from "@iconify/react";
 import github from "@iconify-icons/mdi/github";
 import linkedIn from "@iconify-icons/mdi/linkedin";
