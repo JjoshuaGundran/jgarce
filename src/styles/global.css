@@ -8,6 +8,10 @@ body {
   @apply bg-slate-50
 }
 
+.card {
+  @apply border border-purple-100 rounded-lg bg-white;
+}
+
 a, button {
   cursor: pointer;
 }

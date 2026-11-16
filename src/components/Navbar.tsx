@@ -21,7 +21,7 @@ export function Navbar({ sections }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   
   return (
-    <nav className="flex items-center justify-between pl-3 pr-2 py-2 my-2 rounded-lg flex-wrap border border-purple-100 bg-white">
+    <nav className="card flex items-center justify-between pl-3 pr-2 py-2 my-2 flex-wrap">
       <span className="font-bold text-lg tracking-tight">John Gundran</span>
       <div className="items-center justify-center gap-1 hidden sm:flex">
         {sections.map(section => <NavbarButton section={section} onClick={() => setIsOpen(false)} />)}
