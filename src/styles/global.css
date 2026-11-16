@@ -1,48 +1,21 @@
 @import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    @apply min-h-svh w-full bg-gray-200 overflow-hidden flex
+  @apply bg-slate-50
 }
 
-.tab-bg-transition {
-    @apply bg-gray-100 hover:bg-purple-100;
-    transition: background-color 0.3s ease;
+.card {
+  @apply border border-purple-100 rounded-lg bg-white;
 }
 
-.tab-bg-transition.active {
-    @apply bg-purple-300;
+a, button {
+  cursor: pointer;
 }
 
-.tab-container {
-    @apply h-full max-h-full flex flex-col gap-1 overflow-x-hidden *:bg-white *:rounded-3xl *:shadow-md
-}
-
-.card.enter {
-    animation: card-enter var(--card-animation-duration, 600ms) ease-in-out both;
-    animation-delay: var(--card-enter-delay);
-}
-
-.card.exit {
-    animation: card-exit var(--card-animation-duration, 600ms) ease-in-out both;
-    animation-delay: var(--card-exit-delay);
-}
-
-@keyframes card-enter {
-    from {
-        transform: translateX(300%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes card-exit {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-300%);
-    }
+a:hover, button:hover {
+  @apply bg-purple-50 text-purple-800
 }
